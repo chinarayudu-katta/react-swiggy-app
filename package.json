@@ -1,0 +1,30 @@
+{
+  "name": "swiggy-react",
+  "version": "1.0.0",
+  "description": "This is Swiggy React by Chinarayudu Katta",
+  "keywords": [],
+  "homepage": "https://github.com/chinarayudu-katta/react-swiggy-app#readme",
+  "bugs": {
+    "url": "https://github.com/chinarayudu-katta/react-swiggy-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chinarayudu-katta/react-swiggy-app.git"
+  },
+  "license": "ISC",
+  "author": "Chinarayudu Katta",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "browserList": [
+    "last 2 versions"
+  ]
+}
