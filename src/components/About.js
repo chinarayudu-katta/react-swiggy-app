@@ -1,16 +1,26 @@
 import React from 'react'
-import User from './User'
-import UserClass from './UserClass'
+import ProfileClass from './ProfileClass'
 
-const About = () => {
-  return (
+class About extends React.Component {
+  constructor(props){
+    super(props);
+    // console.log("Parent Constructor")
+  }
+  componentDidMount(){
+    // console.log("Parent Component Did Mount")
+  }
+  render(){
+    // console.log("Parent render")
+    return (
     <div>
         <h1>About</h1>
         <h2>This is Rayudu React Application</h2>
-        <User />
-        <UserClass />
+        {/* <User name={"Chinna (function)"} /> */}
+        <ProfileClass name={"First"} location={"Revuru class"} />
     </div>
   )
+  }
 }
+
 
 export default About
