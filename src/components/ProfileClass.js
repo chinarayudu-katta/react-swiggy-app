@@ -32,7 +32,7 @@ class ProfileClass extends React.Component {
     <div className="user-card">
             <img style={{ width: "100px", height: "100px" }} src={avatar_url} />
             <h2>Name: {login}</h2>
-            <h3>Location: {location ? "null" : ''} </h3>
+            <h3>Location: {location} </h3>
         </div>
         )
     }

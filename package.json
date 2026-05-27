@@ -20,9 +20,14 @@
     "test": "jest"
   },
   "devDependencies": {
-    "parcel": "^2.16.4"
+    "@tailwindcss/cli": "^4.3.0",
+    "autoprefixer": "^10.5.0",
+    "parcel": "^2.16.4",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.19"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^6.30.3"
