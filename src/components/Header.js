@@ -18,14 +18,18 @@ const Header = () => {
                 <img className="w-40" src={LOGO_URL} />
             </div>
             <div className="flex items-center">
-                <ul className="flex p-4 m-4">
-                    <li className="px-4">Online Status: {onlineStatus ? "✅" : "🔴"}</li>
-                    <li className="px-4"><Link to="/">Home</Link></li>
-                    <li className="px-4"><Link to="/about">About Us</Link></li>
-                    <li className="px-4"><Link to="/contact">Contact Us</Link></li>
-                    <li className="px-4"><Link to="/grocery">Grocery</Link></li>
-                    <li>Cart</li>
-                    <button className="login" onClick={handleClick}>{login}</button>
+                <ul className="flex items-center p-4 m-4 gap-8">
+                    <li>Online Status: {onlineStatus ? "✅" : "🔴"}</li>
+                    <li className="hover:text-blue-500"><Link to="/">Home</Link></li>
+                    <li className="hover:text-blue-500"><Link to="/about">About Us</Link></li>
+                    <li className="hover:text-blue-500"><Link to="/contact">Contact Us</Link></li>
+                    <li className="hover:text-blue-500"><Link to="/grocery">Grocery</Link></li>
+                    <li className="hover:text-blue-500">Cart</li>
+                    <button className={`px-4 py-2 rounded-lg text-white font-semibold transition-all duration-300 ${
+                login === "Login"
+                    ? "bg-green-500 hover:bg-green-600"
+                    : "bg-red-500 hover:bg-red-600"
+            }`} onClick={handleClick}>{login}</button>
                 </ul>
             </div>
         </div>

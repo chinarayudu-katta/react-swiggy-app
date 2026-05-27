@@ -1,13 +1,15 @@
-    import ResturantCard from './RestaurantCard';
+    import ResturantCard, {withPromotedLabel} from './RestaurantCard';
     import { useEffect, useState } from 'react';
     import Shimmer from './Shimmer';
     import { Link } from 'react-router-dom';
     import useOnlineStatus from '../utils/useOnlineStatus';
-
+    
     const Body = () => {
         const [listOfRestaurants, setListOfRestaurants] = useState([]);
         const [filteredRestaurant, setFilteredRestaurant] = useState([]);
         const [searchText, setSearchText] = useState("");
+        const RestuarantCardPromoted = withPromotedLabel(ResturantCard);
+
         const onlineStatus = useOnlineStatus();
         useEffect(()=> {
             fetchData();
@@ -59,7 +61,12 @@
                         </div>
                         <div className="flex flex-wrap">
                             {filteredRestaurant.map((restaurant)=> (
-                                <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}><ResturantCard resData={restaurant} /></Link>
+                                <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}>
+                                    {
+                                        restaurant.info.isOpen ? <RestuarantCardPromoted resData={restaurant} /> : <ResturantCard resData={restaurant} /> 
+                                    }
+                                    <ResturantCard resData={restaurant} />
+                                </Link>
                             ))}
                         </div>
                     </div>

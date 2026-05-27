@@ -15,8 +15,20 @@ const ResturantCard = (props) => {
                 <h4>{cuisines.join(", ")}</h4>
                 <h4>{avgRating} stars</h4>
                 <h4>{costForTwo} FOR TWO</h4>
-                {/* <h4>{resData.info.sla.deliveryTime} 38 minutes</h4> */}
             </div>  
         )   
     }
+
+export const withPromotedLabel = (ResturantCard) => {
+        return (props) => {
+            return (
+                <div>
+                    {/* <label>Promoted</label> */}
+                    <ResturantCard {...props} />
+                </div>
+            )
+        }
+}
+
+
 export default ResturantCard;
