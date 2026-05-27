@@ -1,19 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Shimmer from './Shimmer';
-import mockMenu from '../utils/mockData.json'
+import useRestaurantMenu from '../utils/useRestaurantMenu';
 
 const RestaurantMenu = () => {
-    const [resInfo, setResInfo] = useState(null);
-
-    useEffect(()=> {
-        fetchMenu()
-    }, [])
-
-    const fetchMenu = () => {
-      setResInfo(mockMenu)
-      console.log("Mock menu: ", mockMenu)
-    };
-
+    const resInfo = useRestaurantMenu()
+    
     if(resInfo === null) return <Shimmer />
     
     const {name, cuisines, cloudinaryImageId, costForTwoMessage} = 
@@ -30,19 +21,10 @@ const RestaurantMenu = () => {
         <ul>
             {itemCards.map((item) => (
                     <li key={item.card.info.id}>
-
                         <h4>{item.card.info.name}</h4>
-
-                        <p>
-                            ₹ {item.card.info.price / 100}
-                        </p>
-
-                        <p>
-                            {item.card.info.description}
-                        </p>
-
+                        <p>₹ {item.card.info.price / 100}</p>
+                        <p>{item.card.info.description}</p>
                         <hr />
-
                     </li>
                 ))}
         </ul>
