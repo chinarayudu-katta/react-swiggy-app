@@ -9,6 +9,7 @@ const Contact = () => {
         feedback, or support regarding our food delivery services.</p>
       <div className="mt-6 space-y-2">
         <h2 className="text-xl font-semibold">Get in Touch</h2>
+        <input />
         <p><span className="font-bold">Email:</span> support@swiggyreact.com</p>
         <p><span className="font-bold">Phone:</span> +91 9876543210</p>
         <p><span className="font-bold">Address:</span> Bangalore, Karnataka, India</p>

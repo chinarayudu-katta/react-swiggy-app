@@ -48,3 +48,21 @@ Two type of Export/Import
 
 export const Component
 import {Component} from "path"
+
+# Types of testing (developer)
+
+- Unit Testing
+- Integration Testing
+- End to End Testing - e2e testing
+
+# Setting up testing
+
+- install React Testing Library
+- install jest
+- install Babel dependencies
+- Configure Babel
+- Configure parcel Config file to disable default transpilation
+- Jest -npx jest --init
+- install jsdom library
+- install @babel/preset-react
+- install @testing-library/jest-dom
